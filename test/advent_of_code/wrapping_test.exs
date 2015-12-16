@@ -9,9 +9,7 @@ defmodule AdventOfCode.WrappingTest do
 2x3x4
 1x1x10
     """
-    {:ok, input_io} = StringIO.open(input)
-    input_stream = IO.stream(input_io, :line)
-    assert W.calculate_wrapping_area(input_stream) == 58 + 43
+    assert W.calculate_wrapping_area(input) == 58 + 43
   end
 
   test "calculates ribbon length needed for presents" do
@@ -19,8 +17,6 @@ defmodule AdventOfCode.WrappingTest do
 2x3x4
 1x1x10
     """
-    {:ok, input_io} = StringIO.open(input)
-    input_stream = IO.stream(input_io, :line)
-    assert W.calculate_ribbon_length(input_stream) == 34 + 14
+    assert W.calculate_ribbon_length(input) == 34 + 14
   end
 end
