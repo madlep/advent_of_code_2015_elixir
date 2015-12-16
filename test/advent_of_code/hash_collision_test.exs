@@ -1,5 +1,5 @@
 defmodule AdventOfCode.HashCollisionTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   alias AdventOfCode.HashCollision, as: H
 

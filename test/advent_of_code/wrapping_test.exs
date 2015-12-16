@@ -1,5 +1,5 @@
 defmodule AdventOfCode.WrappingTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest AdventOfCode.Wrapping
 
   alias AdventOfCode.Wrapping, as: W

@@ -1,5 +1,5 @@
 defmodule AdventOfCode.ParensTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest AdventOfCode.Parens
 
   alias AdventOfCode.Parens, as: P
