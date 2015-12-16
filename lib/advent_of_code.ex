@@ -39,4 +39,13 @@ defmodule AdventOfCode do
     3
   """
   def day3_2(input), do: AdventOfCode.Grid.count_visited_locations(input, 2)
+
+  @doc ~S"""
+    iex> AdventOfCode.day4_1("abcdef")
+    609043
+
+    iex> AdventOfCode.day4_1("pqrstuv")
+    1048970
+  """
+  def day4_1(input), do: AdventOfCode.HashCollision.find_collision(input, 5)
 end
