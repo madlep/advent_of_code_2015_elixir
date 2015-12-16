@@ -1,27 +1,42 @@
 defmodule AdventOfCode do
 
-  def day1_1(input), do: AdventOfCode.Parens.parse(input)
+  @doc ~S"""
+    iex> AdventOfCode.day1_1 "(()"
+    1
+  """
+  def day1_1(input), do: AdventOfCode.Parens.parse_level(input)
 
-  def day1_2(input), do: AdventOfCode.Parens.find_floor_offset(input)
+  @doc ~S"""
+    iex> AdventOfCode.day1_2 "((()(", 3
+    3
+  """
+  def day1_2(input, floor \\ -1), do: AdventOfCode.Parens.find_floor_offset(input, floor)
 
+  @doc ~S"""
+    iex> AdventOfCode.day2_1("2x3x4\n1x1x10\n")
+    101
+  """
   def day2_1(input) do
-    input
-    |> string_stream_io
-    |> AdventOfCode.Wrapping.calculate_wrapping_area
+    AdventOfCode.Wrapping.calculate_wrapping_area(input)
   end
 
+  @doc ~S"""
+    iex> AdventOfCode.day2_2("2x3x4\n1x1x10\n")
+    48
+  """
   def day2_2(input) do
-    input
-    |> string_stream_io
-    |> AdventOfCode.Wrapping.calculate_ribbon_length
+    AdventOfCode.Wrapping.calculate_ribbon_length(input)
   end
 
+  @doc ~S"""
+    iex> AdventOfCode.day3_1("^>v<")
+    4
+  """
   def day3_1(input), do: AdventOfCode.Grid.count_visited_locations(input)
 
+  @doc ~S"""
+    iex> AdventOfCode.day3_2("^>v<")
+    3
+  """
   def day3_2(input), do: AdventOfCode.Grid.count_visited_locations(input, 2)
-
-  defp string_stream_io(input) do
-    {:ok, input_io} = StringIO.open(input)
-    IO.stream(input_io, :line)
-  end
 end
