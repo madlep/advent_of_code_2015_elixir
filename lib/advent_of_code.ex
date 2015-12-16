@@ -48,4 +48,10 @@ defmodule AdventOfCode do
     1048970
   """
   def day4_1(input), do: AdventOfCode.HashCollision.find_collision(input, 5)
+
+  @doc ~S"""
+    iex> AdventOfCode.day4_2("abcdef")
+    6742839
+  """
+  def day4_2(input), do: AdventOfCode.HashCollision.find_collision(input, 6)
 end
