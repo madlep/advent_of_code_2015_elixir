@@ -8,7 +8,7 @@ defmodule AdventOfCode.Grid do
   end
 
   defp build_visited do
-    HashSet.new |> Set.put({0,0}
+    HashSet.new |> Set.put({0,0})
   end
 
   defp visit("", _visitors, visited), do: Set.size(visited)
