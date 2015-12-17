@@ -1,13 +1,10 @@
 defmodule AdventOfCode.Wrapping do
+  import AdventOfCode.InputString, only: [to_io_stream: 1]
+
   def calculate_wrapping_area(input) do
     input
-    |> string_stream_io
+    |> to_io_stream
     |> Enum.reduce(0, &(parse(&1) |> calculate_area |> + &2))
-  end
-
-  defp string_stream_io(input) do
-    {:ok, input_io} = StringIO.open(input)
-    IO.stream(input_io, :line)
   end
 
   defp parse(present) do
@@ -24,7 +21,7 @@ defmodule AdventOfCode.Wrapping do
 
   def calculate_ribbon_length(input) do
     input
-    |> string_stream_io
+    |> to_io_stream
     |> Enum.reduce(0, &(parse(&1) |> calculate_length |> + &2))
   end
 
