@@ -40,14 +40,21 @@ defmodule AdventOfCode do
   """
   def day3_2(input), do: AdventOfCode.Grid.count_visited_locations(input, 2)
 
-  @doc ~S"""
-    iex> AdventOfCode.day4_1("abcdef")
-    609043
+  # these are slow. uncomment to run doctest
+  # @doc ~S"""
+  #   iex> AdventOfCode.day4_1("abcdef")
+  #   609043
 
-    iex> AdventOfCode.day4_1("pqrstuv")
-    1048970
-  """
+  #   iex> AdventOfCode.day4_1("pqrstuv")
+  #   1048970
+  # """
   def day4_1(input), do: AdventOfCode.HashCollision.find_collision(input, 5)
+
+  # @doc ~S"""
+  # iex> AdventOfCode.day4_2("abcdef")
+  # 6742839
+  # """
+  def day4_2(input), do: AdventOfCode.HashCollision.find_collision(input, 6)
 
   @doc ~S"""
     iex> AdventOfCode.day4_2("abcdef")
