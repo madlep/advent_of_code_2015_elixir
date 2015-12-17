@@ -57,8 +57,8 @@ defmodule AdventOfCode do
   def day4_2(input), do: AdventOfCode.HashCollision.find_collision(input, 6)
 
   @doc ~S"""
-    iex> AdventOfCode.day4_2("abcdef")
-    6742839
+    iex> AdventOfCode.day5_1("ugknbfddgicrmopn\naaa\njchzalrnumimnmhp\nhaegwjzuvuyypxyu\ndvszwmarrgswjxmb\n")
+    2
   """
-  def day4_2(input), do: AdventOfCode.HashCollision.find_collision(input, 6)
+  def day5_1(input), do: AdventOfCode.NiceString.count_nice(input)
 end
