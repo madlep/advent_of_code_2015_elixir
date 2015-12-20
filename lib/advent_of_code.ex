@@ -61,4 +61,10 @@ defmodule AdventOfCode do
     2
   """
   def day5_1(input), do: AdventOfCode.NiceString.count_nice(input)
+
+  @doc ~S"""
+    iex> AdventOfCode.day5_2("qjhvhtzxzqqjkmpb\nxxyxx\nuurcxstgmygtbstg\nieodomkazucvgmuy\n")
+    2
+  """
+  def day5_2(input), do: AdventOfCode.NicerString.count_nice(input)
 end
