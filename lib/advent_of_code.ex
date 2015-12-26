@@ -98,7 +98,7 @@ defmodule AdventOfCode do
 
   @doc ~S"""
     iex> AdventOfCode.day6_2("turn on 10,10 through 20,20\nturn off 15,15 through 25,25\ntoggle 5,5 through 11,11\n")
-    (((7 * 7) - (2 * 2)) * 2) + # top left square 
+    (((7 * 7) - (2 * 2)) * 2) + # top left square
     ((2 * 2) * 3)             + # intersection
     ((11 * 11) - (6 * 6) - (2 * 2)) # bottom right square
 
