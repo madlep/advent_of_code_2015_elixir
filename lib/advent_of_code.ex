@@ -124,4 +124,15 @@ defmodule AdventOfCode do
 .........11111000000
   """
   def day6_2(input), do: AdventOfCode.BrightnessGrid.run(input)
+
+  @doc ~S"""
+    iex> AdventOfCode.day7_1("123 -> x\n456 -> y\nx AND y -> d\nx OR y -> e\nx LSHIFT 2 -> f\ny RSHIFT 2 -> g\nNOT x -> h\nNOT y -> i\n")
+    %{d: 72, e: 507, f: 492, g: 114, h: 65412, i: 65079, x: 123, y: 456}
+  """
+  def day7_1(input), do: AdventOfCode.Circuit.run(input)
+
+  def day7_2(input, new_b_value) do
+    Regex.replace(~r/\d+ -> b\n/, input, "#{new_b_value} -> b\n")
+    |> AdventOfCode.Circuit.run
+  end
 end
