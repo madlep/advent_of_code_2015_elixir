@@ -136,4 +136,22 @@ defmodule AdventOfCode do
     Regex.replace(~r/\d+ -> b\n/, input, "#{new_b_value} -> b\n")
     |> AdventOfCode.Circuit.run
   end
+
+  @doc ~S"""
+    iex> AdventOfCode.day8_1("\"\"\n\"abc\"\n\"aaa\\\"aaa\"\n\"\\x27\"")
+    (2 + 5 + 10 + 6) - (0 + 3 + 7 + 1)
+  """
+  def day8_1(input) do
+    AdventOfCode.StringCodeSize.run(input)
+    |> AdventOfCode.StringCodeSize.code_memory_diff
+  end
+
+  @doc ~S"""
+    iex> AdventOfCode.day8_2("\"\"\n\"abc\"\n\"aaa\\\"aaa\"\n\"\\x27\"")
+    (6 + 9 + 16 + 11) - (2 + 5 + 10 + 6)
+  """
+  def day8_2(input) do
+    AdventOfCode.StringCodeSize.run(input)
+    |> AdventOfCode.StringCodeSize.encoded_code_diff
+  end
 end
