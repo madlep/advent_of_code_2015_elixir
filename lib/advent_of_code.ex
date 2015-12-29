@@ -132,6 +132,7 @@ defmodule AdventOfCode do
   def day7_1(input), do: AdventOfCode.Circuit.run(input)
 
   def day7_2(input, new_b_value) do
+    # TODO would be nicer to make circuit reconfigure when input comes in rather than just hacking input
     Regex.replace(~r/\d+ -> b\n/, input, "#{new_b_value} -> b\n")
     |> AdventOfCode.Circuit.run
   end
