@@ -154,4 +154,20 @@ defmodule AdventOfCode do
     AdventOfCode.StringCodeSize.run(input)
     |> AdventOfCode.StringCodeSize.encoded_code_diff
   end
+
+  @doc ~S"""
+    iex> AdventOfCode.day9_1("London to Dublin = 464\nLondon to Belfast = 518\nDublin to Belfast = 141")
+    464 + 141 # London -> Dublin -> Belfast
+  """
+  def day9_1(input) do
+    AdventOfCode.TravellingSanta.run_optimal(input)
+  end
+
+  @doc ~S"""
+    iex> AdventOfCode.day9_2("London to Dublin = 464\nLondon to Belfast = 518\nDublin to Belfast = 141")
+    464 + 518 # Dublin -> London -> Belfast
+  """
+  def day9_2(input) do
+    AdventOfCode.TravellingSanta.run_deoptimal(input)
+  end
 end
