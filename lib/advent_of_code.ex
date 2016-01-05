@@ -172,25 +172,26 @@ defmodule AdventOfCode do
   end
 
   @doc ~S"""
-    iex> AdventOfCode.day10_1(1)
-    11
+    iex> AdventOfCode.day10_1("1")
+    2 # "11"
 
-    iex> AdventOfCode.day10_1(11)
-    21
+    iex> AdventOfCode.day10_1("11")
+    2 # "21"
 
-    iex> AdventOfCode.day10_1(21)
-    1211
+    iex> AdventOfCode.day10_1("21")
+    4 # "1211"
 
-    iex> AdventOfCode.day10_1(1211)
-    111221
+    iex> AdventOfCode.day10_1("1211")
+    6 # "111221"
 
-    iex> AdventOfCode.day10_1(111221)
-    312211
+    iex> AdventOfCode.day10_1("111221")
+    6 # "312211"
 
-    iex> AdventOfCode.day10_1(1, 5) # 5 iterations
-    312211
+    iex> AdventOfCode.day10_1("1", 5) # 5 iterations
+    6 # "312211"
   """
   def day10_1(number, iterations \\ 1) do
-    AdventOfCode.LookSeeInteger.run(number, iterations)
+    AdventOfCode.LookSeeBitstring.run(number, iterations)
+    |> String.length
   end
 end
