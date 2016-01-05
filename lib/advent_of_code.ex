@@ -197,4 +197,23 @@ defmodule AdventOfCode do
   end
 
   def day10_2(number, iterations \\1), do: day10_1(number, iterations)
+
+  @doc ~S"""
+    # SLOW
+    # iex> AdventOfCode.day11_1('abcdefgh')
+    # 'abcdffaa'
+
+    # iex> AdventOfCode.day11_1('ghijklmn')
+    # 'ghjaabcc'
+  """
+  def day11_1(password) do
+    password
+    |> AdventOfCode.Password.next_valid
+  end
+
+  def day11_2(password) do
+    password
+    |> AdventOfCode.Password.next_valid
+    |> AdventOfCode.Password.next_valid
+  end
 end
