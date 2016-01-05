@@ -8,8 +8,7 @@ defmodule AdventOfCode.LookSeeInteger do
       result = look_see(n)
       {n, result}
     end)
-    |> Stream.drop(iterations - 1)
-    |> Enum.at(1)
+    |> Enum.at(iterations)
   end
 
   def look_see(number) do
