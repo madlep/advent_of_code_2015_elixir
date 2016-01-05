@@ -97,6 +97,6 @@ defmodule AdventOfCode.Circuit do
     for {label,wire} <- state do
       {label, Wire.value(wire)}
     end
-    |> Enum.into %{}
+    |> Enum.into(%{})
   end
 end

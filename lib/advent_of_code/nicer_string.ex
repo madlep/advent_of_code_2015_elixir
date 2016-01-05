@@ -49,7 +49,7 @@ defmodule AdventOfCode.NicerString do
   end
   defp detect_bracket(state, _chunk), do: state
 
-  defp result_nicer?(state=%T{duplicate_found: dup, bracket_found: bracket}) do
+  defp result_nicer?(%T{duplicate_found: dup, bracket_found: bracket}) do
     dup && bracket
   end
 

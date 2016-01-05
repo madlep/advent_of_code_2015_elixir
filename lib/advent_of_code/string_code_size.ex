@@ -61,7 +61,7 @@ defmodule AdventOfCode.StringCodeSize do
     %State{state | memory: msize + incr}
   end
 
-  defp incr_encoded(state=%State{encoded: esize}, incr \\ 1) do
+  defp incr_encoded(state=%State{encoded: esize}, incr) do
     %State{state | encoded: esize + incr}
   end
 
