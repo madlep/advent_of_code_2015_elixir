@@ -170,4 +170,27 @@ defmodule AdventOfCode do
   def day9_2(input) do
     AdventOfCode.TravellingSanta.run_deoptimal(input)
   end
+
+  @doc ~S"""
+    iex> AdventOfCode.day10_1(1)
+    11
+
+    iex> AdventOfCode.day10_1(11)
+    21
+
+    iex> AdventOfCode.day10_1(21)
+    1211
+
+    iex> AdventOfCode.day10_1(1211)
+    111221
+
+    iex> AdventOfCode.day10_1(111221)
+    312211
+
+    iex> AdventOfCode.day10_1(1, 5) # 5 iterations
+    312211
+  """
+  def day10_1(number, iterations \\ 1) do
+    AdventOfCode.LookSee.run(number, iterations)
+  end
 end
