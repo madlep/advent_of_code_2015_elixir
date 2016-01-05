@@ -1,5 +1,5 @@
 # this is fine for small numbers, but it gets HUGE with 40 iterations. Scrapping this and going with bitstring approach I'd considered originally
-defmodule AdventOfCode.LookSee do
+defmodule AdventOfCode.LookSeeInteger do
   @digit_multipler 10
 
   def run(number, iterations) do

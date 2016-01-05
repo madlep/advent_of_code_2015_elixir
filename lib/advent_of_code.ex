@@ -191,6 +191,6 @@ defmodule AdventOfCode do
     312211
   """
   def day10_1(number, iterations \\ 1) do
-    AdventOfCode.LookSee.run(number, iterations)
+    AdventOfCode.LookSeeInteger.run(number, iterations)
   end
 end
