@@ -195,4 +195,6 @@ defmodule AdventOfCode do
     AdventOfCode.LookSeeBitstring.run(number, iterations)
     |> String.length
   end
+
+  def day10_2(number, iterations \\1), do: day10_1(number, iterations)
 end
