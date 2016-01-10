@@ -216,4 +216,38 @@ defmodule AdventOfCode do
     |> AdventOfCode.Password.next_valid
     |> AdventOfCode.Password.next_valid
   end
+
+  @doc ~S"""
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S(1,2,3]))
+    6
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S({"a":2,"b":4}))
+    6
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S([[[3]]]))
+    3
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S({"a":{"b":4},"c":-1}))
+    3
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S({"a":[-1,1]}))
+    0
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S([-1,{"a":1}]))
+    0
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S([]))
+    0
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S({}))
+    0
+
+    iex> AdventOfCode.JsonAccounting.add_numbers(~S({"a": 12, "b" : -34}))
+    12 - 34
+
+  """
+  def day12_1(json) do
+    json
+    |> AdventOfCode.JsonAccounting.add_numbers
+  end
 end
